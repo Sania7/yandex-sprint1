@@ -56,7 +56,7 @@ public class Main {
                 }
                 int monthNumber = scanner.nextInt();
                 String month = months[monthNumber - 1];
-
+                scanner.close();
                 stepTracker.printAllSteps(month);
                 stepTracker.numberOfStepsPerMonth(month);
                 stepTracker.maximumNumberOfStepsPerMonth(month);

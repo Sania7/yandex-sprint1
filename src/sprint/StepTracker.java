@@ -35,10 +35,14 @@ public class StepTracker {
     }
 
     void printAllSteps(String month) {
-        ArrayList<Integer> totalSteps = numberOfSteps.get(month);
-        for (int i = 0; i < totalSteps.size(); i++) {
-            System.out.println((i + 1) + " день: " + totalSteps.get(i));
-        }
+            ArrayList<Integer> totalSteps = numberOfSteps.get(month);
+            if (totalSteps != null) {
+            for (int i = 0; i < totalSteps.size(); i++) {
+                System.out.println((i + 1) + " день: " + totalSteps.get(i));
+            }
+            } else {
+                System.out.println("Введите данные!");
+            }
     }
 
     void numberOfStepsPerMonth(String month) {
